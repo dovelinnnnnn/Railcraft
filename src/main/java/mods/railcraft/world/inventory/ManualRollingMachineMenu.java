@@ -1,6 +1,6 @@
 package mods.railcraft.world.inventory;
 
-import mods.railcraft.util.container.ContainerMapper;
+import mods.railcraft.util.container.AdvancedContainer;
 import mods.railcraft.world.inventory.slot.RollingResultSlot;
 import mods.railcraft.world.inventory.slot.UnmodifiableSlot;
 import mods.railcraft.world.level.block.entity.ManualRollingMachineBlockEntity;
@@ -19,7 +19,7 @@ public class ManualRollingMachineMenu extends RailcraftMenu {
   private final ManualRollingMachineBlockEntity blockEntity;
   private final ManualRollingMachineBlockEntity.RollingCraftingContainer craftMatrix;
   private final ResultContainer craftResult;
-  private final ContainerMapper resultSlot;
+  private final AdvancedContainer resultSlot;
 
   protected ManualRollingMachineMenu(MenuType<?> type, int id, Inventory inventory,
       ManualRollingMachineBlockEntity blockEntity, int xs, int xy) {

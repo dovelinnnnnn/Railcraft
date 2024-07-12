@@ -5,7 +5,6 @@ import org.jetbrains.annotations.Nullable;
 import mods.railcraft.api.core.CompoundTagKeys;
 import mods.railcraft.data.recipes.builders.RollingRecipeBuilder;
 import mods.railcraft.util.container.AdvancedContainer;
-import mods.railcraft.util.container.ContainerMapper;
 import mods.railcraft.util.container.ContainerTools;
 import mods.railcraft.world.inventory.ManualRollingMachineMenu;
 import mods.railcraft.world.item.crafting.RailcraftRecipeTypes;
@@ -26,11 +25,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implements MenuProvider {
 
-  private final AdvancedContainer container;
+  private final AdvancedContainer invResult;
   private final FakeRollingContainer matrixListener = new FakeRollingContainer();
   protected final RollingCraftingContainer craftMatrix =
       new RollingCraftingContainer(matrixListener, 3, 3);
-  protected final ContainerMapper invResult, invMatrix;
 
   protected boolean isWorking, useLast;
   private Optional<RollingRecipe> currentRecipe = Optional.empty();
@@ -39,9 +37,7 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
   public ManualRollingMachineBlockEntity(BlockEntityType<?> blockEntityType, BlockPos blockPos,
       BlockState blockState) {
     super(blockEntityType, blockPos, blockState);
-    this.container = new AdvancedContainer(10);
-    this.invResult = ContainerMapper.make(this.container, 0, 9);
-    this.invMatrix = ContainerMapper.make(this.container, 9, 1);
+    this.invResult = new AdvancedContainer(1);
   }
 
   public ManualRollingMachineBlockEntity(BlockPos blockPos, BlockState blockState) {
@@ -51,7 +47,7 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
   @Override
   protected void saveAdditional(CompoundTag tag) {
     super.saveAdditional(tag);
-    tag.put(CompoundTagKeys.CONTAINER, this.container.createTag());
+    tag.put(CompoundTagKeys.CONTAINER, this.invResult.createTag());
     tag.put(CompoundTagKeys.CRAFT_MATRIX, ContainerTools.writeContainer(craftMatrix));
     tag.putInt(CompoundTagKeys.PROGRESS, this.progress);
   }
@@ -59,7 +55,7 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
   @Override
   public void load(CompoundTag tag) {
     super.load(tag);
-    this.container.fromTag(tag.getList(CompoundTagKeys.CONTAINER, Tag.TAG_COMPOUND));
+    this.invResult.fromTag(tag.getList(CompoundTagKeys.CONTAINER, Tag.TAG_COMPOUND));
     ContainerTools.readContainer(this.craftMatrix,
         tag.getList(CompoundTagKeys.CRAFT_MATRIX, Tag.TAG_COMPOUND));
     this.progress = tag.getInt(CompoundTagKeys.PROGRESS);
@@ -92,12 +88,8 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
     return this.craftMatrix;
   }
 
-  public ContainerMapper getInvResult() {
+  public AdvancedContainer getInvResult() {
     return this.invResult;
-  }
-
-  public ContainerMapper getInvMatrix() {
-    return this.invMatrix;
   }
 
   public Optional<RollingRecipe> getRecipe() {

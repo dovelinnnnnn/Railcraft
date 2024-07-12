@@ -11,9 +11,11 @@ import mods.railcraft.world.inventory.PoweredRollingMachineMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -30,7 +32,7 @@ public class PoweredRollingMachineBlockEntity extends ManualRollingMachineBlockE
   public PoweredRollingMachineBlockEntity(BlockPos blockPos, BlockState blockState) {
     super(RailcraftBlockEntityTypes.POWERED_ROLLING_MACHINE.get(), blockPos, blockState);
     this.itemHandler = LazyOptional.of(() ->
-        new CombinedInvWrapper(this.craftMatrix, this.invResult));
+        new CombinedInvWrapper(this.craftMatrix, this.getInvResult()));
     this.energyHandler = LazyOptional.of(() -> new ForwardingEnergyStorage(this::storage));
   }
 
@@ -39,6 +41,11 @@ public class PoweredRollingMachineBlockEntity extends ManualRollingMachineBlockE
     if (access().useCharge(CHARGE_PER_TICK, false)) {
       super.progress();
     }
+  }
+
+  public void dropContents(Level level, BlockPos pos) {
+    Containers.dropContents(level, pos, this.getInvResult());
+    Containers.dropContents(level, pos, this.craftMatrix);
   }
 
   @Nullable
