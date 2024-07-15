@@ -55,7 +55,10 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
   @Override
   public void load(CompoundTag tag) {
     super.load(tag);
-    this.invResult.fromTag(tag.getList(CompoundTagKeys.CONTAINER, Tag.TAG_COMPOUND));
+    var list = tag.getList(CompoundTagKeys.CONTAINER, Tag.TAG_COMPOUND);
+    if (list.size() == 1) {
+      this.invResult.fromTag(list);
+    }
     ContainerTools.readContainer(this.craftMatrix,
         tag.getList(CompoundTagKeys.CRAFT_MATRIX, Tag.TAG_COMPOUND));
     this.progress = tag.getInt(CompoundTagKeys.PROGRESS);
