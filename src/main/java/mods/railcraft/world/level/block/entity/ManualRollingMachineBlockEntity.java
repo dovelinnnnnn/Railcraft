@@ -185,7 +185,7 @@ public class ManualRollingMachineBlockEntity extends RailcraftBlockEntity implem
 
   public static class RollingCraftingContainer extends TransientCraftingContainer {
 
-    public RollingCraftingContainer(FakeRollingContainer menu, int width, int height) {
+    private RollingCraftingContainer(FakeRollingContainer menu, int width, int height) {
       super(menu, width, height);
     }
 
