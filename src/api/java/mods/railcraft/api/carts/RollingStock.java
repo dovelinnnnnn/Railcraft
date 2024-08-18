@@ -194,8 +194,8 @@ public interface RollingStock {
   @ApiStatus.Internal
   void removeLink(Side side);
 
-  default boolean unlinkAll() {
-    return Stream.of(Side.values()).allMatch(this::unlink);
+  default void unlinkAll() {
+    Stream.of(Side.values()).forEach(this::unlink);
   }
 
   default boolean unlink(RollingStock minecart) {
