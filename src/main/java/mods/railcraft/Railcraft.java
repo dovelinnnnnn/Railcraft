@@ -92,6 +92,7 @@ import net.minecraftforge.event.entity.EntityLeaveLevelEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
@@ -323,6 +324,13 @@ public class Railcraft {
     if (event.getEntity() instanceof AbstractMinecart cart
         && !cart.level().isClientSide() && cart.isRemoved()) {
       RollingStock.getOrThrow(cart).removed(cart.getRemovalReason());
+    }
+  }
+
+  @SubscribeEvent
+  public void handleLevelUnload(LevelEvent.Unload event) {
+    if (event.getLevel() instanceof ServerLevel level) {
+      ChargeProviderImpl.DISTRIBUTION.removeChargeNetwork(level);
     }
   }
 
