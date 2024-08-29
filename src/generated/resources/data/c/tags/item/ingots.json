@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#c:ingots/steel",
+    "#c:ingots/tin",
+    "#c:ingots/zinc",
+    "#c:ingots/brass",
+    "#c:ingots/bronze",
+    "#c:ingots/nickel",
+    "#c:ingots/invar",
+    "#c:ingots/lead",
+    "#c:ingots/silver"
+  ]
+}

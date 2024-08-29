@@ -1,4 +1,4 @@
-// 1.21.1	2024-08-19T12:26:50.876519	Tags for minecraft:item mod id railcraft
+// 1.21.1	2024-08-25T09:12:57.850367	Tags for minecraft:item mod id railcraft
 e4b5c3cfded4b9b76efeda37728f26dc89261239 data/c/tags/item/armors/boots/steel.json
 5251495abc7cf69ab447d425014c585ffd3ee618 data/c/tags/item/armors/chestplates/steel.json
 e17d210ae3b04c5e5696fab17c38c94dcb437f75 data/c/tags/item/armors/helmets/steel.json
@@ -6,9 +6,11 @@ e17d210ae3b04c5e5696fab17c38c94dcb437f75 data/c/tags/item/armors/helmets/steel.j
 80c9c8b25164675ff5415691211783f71c38107f data/c/tags/item/coal_coke.json
 300d1cc507f1bf874a5931bfa35e08cf1eb1d286 data/c/tags/item/dusts/charcoal.json
 a02497735a6ef3531075c69c738d773ae344a9d4 data/c/tags/item/dusts/coal.json
+18cabcebf78778a7e047f8e32b4631c3ad7db33e data/c/tags/item/dusts/ender_pearl.json
 289fb003679ca3b81c9fa60b0289ba9d0c8d6c8e data/c/tags/item/dusts/obsidian.json
 bbf7f6d0c00803b6e02d423b443d154ae326e93b data/c/tags/item/dusts/saltpeter.json
 49854da25a96b091c439bf470152ab1e94d57dd7 data/c/tags/item/dusts/sulfur.json
+18f97a8f6200b56e94e454448233f41d49541550 data/c/tags/item/gears.json
 92490b80fa24ea30d834e9ca91683e84f3ba7ef3 data/c/tags/item/gears/brass.json
 d14f18ce05fc15ee4f0e1575e7f298c00f079aa9 data/c/tags/item/gears/bronze.json
 f8776c632583384b22e94b57809091324a2e3015 data/c/tags/item/gears/copper.json
@@ -21,6 +23,7 @@ df739a62c8171731a87e8e3937a0c552a158924d data/c/tags/item/gears/silver.json
 b132144ce58c0e15f2bd6fc60521d1185f782191 data/c/tags/item/gears/steel.json
 4042e67b37e84696852d8328eca8efb8be267ab0 data/c/tags/item/gears/tin.json
 d50a8ba5bae7d9d2c2581ce4d0fd4471ee818797 data/c/tags/item/gears/zinc.json
+ede066700353e4bfe084025b8215df6e712fe5b6 data/c/tags/item/ingots.json
 75ab00fcba7527628f8180d4da1258f38eaf7993 data/c/tags/item/ingots/brass.json
 a0ce7d34162c16575f232fefea706bfee9997e5f data/c/tags/item/ingots/bronze.json
 2ce332cc17da714a47e7391f5318a5886db269f3 data/c/tags/item/ingots/invar.json
@@ -53,6 +56,7 @@ e04f5a6285f9ec10108641e77582345991282073 data/c/tags/item/ores/zinc.json
 ab8a6f7d61afc254cc8f018a4e9182ccac386840 data/c/tags/item/ores_in_ground/deepslate.json
 cba1c5a31aa2960efa0703b2e57f8390f53d4ce6 data/c/tags/item/ores_in_ground/netherrack.json
 679d265c52f455f2a0f0f9afcfb254016b47f407 data/c/tags/item/ores_in_ground/stone.json
+29116defc8cf089cc6b3a1c93669c60463c981d7 data/c/tags/item/plates.json
 4ba7bc1b06f9b82047c5bcd4d444e63e0e05e010 data/c/tags/item/plates/brass.json
 5a23b291f3458a08993c77163dd6ae9f6729a2b0 data/c/tags/item/plates/bronze.json
 a7ccebcdf1b41bc019d4ad2b6877842880b59e8c data/c/tags/item/plates/copper.json
@@ -65,6 +69,7 @@ a7ccebcdf1b41bc019d4ad2b6877842880b59e8c data/c/tags/item/plates/copper.json
 b1fe6bdc870219686421c34b2da9aa2ca0d430eb data/c/tags/item/plates/steel.json
 c575c0d7111690d959b7c02ea3f0c90f9ba1f71c data/c/tags/item/plates/tin.json
 2372c4063156cb52654545a3800f2000a85c20d7 data/c/tags/item/plates/zinc.json
+e408990ea3ea37faa1d9c116b7b53c1a9375d57a data/c/tags/item/raw_materials.json
 cb884e9e2d81ae8f3c727477640a978e19230d73 data/c/tags/item/raw_materials/lead.json
 3314b30b66e729f47e099a54fb1a1c76d57a7c6b data/c/tags/item/raw_materials/nickel.json
 aff7016ddb8fcd0b4eab937ab3cd56340f084a30 data/c/tags/item/raw_materials/silver.json
@@ -84,6 +89,7 @@ f34843bfb7b650f383c4d01e491bd1059bfad784 data/c/tags/item/storage_blocks/steel.j
 f20e839f832dcea6925586af038aa6dd6fcae88a data/c/tags/item/storage_blocks/zinc.json
 e3ba2fab927d9f5cba4296693574f0ca9cac69eb data/c/tags/item/tools/axes/steel.json
 88e186f1e72ff7a1d3bfbcb969ef18b8a7acbb5f data/c/tags/item/tools/hoes/steel.json
+05168ea5fb65c2a597f1ca271644789e1dd9aa9c data/c/tags/item/tools/melee_weapon.json
 c12118bda87efc5274515a86a0a7f3b189982de6 data/c/tags/item/tools/pickaxes/steel.json
 9c4696d2ed397966765f5b6e61664c5147e9bac9 data/c/tags/item/tools/shear.json
 15360ef6012773af817ef8496de52353494b4db3 data/c/tags/item/tools/shovels/steel.json

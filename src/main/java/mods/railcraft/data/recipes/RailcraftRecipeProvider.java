@@ -1141,7 +1141,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern("cdc")
         .pattern("aba")
         .define('a', RailcraftTags.Items.TIN_PLATE)
-        .define('b', RailcraftItems.ENDER_DUST.get())
+        .define('b', RailcraftTags.Items.ENDER_DUST)
         .define('c', RailcraftItems.CHARGE_COIL.get())
         .define('d', Tags.Items.STORAGE_BLOCKS_DIAMOND)
         .unlockedBy(getHasName(RailcraftItems.ENDER_DUST.get()),

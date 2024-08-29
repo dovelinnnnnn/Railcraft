@@ -52,6 +52,7 @@ public class RailcraftTags {
     public static final TagKey<Item> BRASS_BLOCK = storageBlocksTag("brass");
     public static final TagKey<Item> COAL_COKE_BLOCK = storageBlocksTag("coal_coke");
 
+    public static final TagKey<Item> PLATES = commonTag("plates");
     public static final TagKey<Item> STEEL_PLATE = platesTag("steel");
     public static final TagKey<Item> IRON_PLATE = platesTag("iron");
     public static final TagKey<Item> TIN_PLATE = platesTag("tin");
@@ -65,6 +66,7 @@ public class RailcraftTags {
     public static final TagKey<Item> NICKEL_PLATE = platesTag("nickel");
     public static final TagKey<Item> SILVER_PLATE = platesTag("silver");
 
+    public static final TagKey<Item> GEARS = commonTag("gears");
     public static final TagKey<Item> STEEL_GEAR = gearsTag("steel");
     public static final TagKey<Item> IRON_GEAR = gearsTag("iron");
     public static final TagKey<Item> TIN_GEAR = gearsTag("tin");
@@ -101,6 +103,7 @@ public class RailcraftTags {
     public static final TagKey<Item> CHARCOAL_DUST = dustsTag("charcoal");
     public static final TagKey<Item> SULFUR_DUST = dustsTag("sulfur");
     public static final TagKey<Item> OBSIDIAN_DUST = dustsTag("obsidian");
+    public static final TagKey<Item> ENDER_DUST = dustsTag("ender_pearl");
 
     public static final TagKey<Item> IRON_TANK_GAUGE = tag("iron_tank_gauge");
     public static final TagKey<Item> IRON_TANK_VALVE = tag("iron_tank_valve");

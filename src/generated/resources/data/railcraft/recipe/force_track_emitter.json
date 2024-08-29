@@ -6,7 +6,7 @@
       "tag": "c:plates/tin"
     },
     "b": {
-      "item": "railcraft:ender_dust"
+      "tag": "c:dusts/ender_pearl"
     },
     "c": {
       "item": "railcraft:charge_coil"
