@@ -159,9 +159,6 @@ public class RailcraftTags {
     public static final TagKey<Item> ARMORS_LEGGINGS_STEEL = commonTag("armors/leggings/steel");
     public static final TagKey<Item> ARMORS_BOOTS_STEEL = commonTag("armors/boots/steel");
 
-    // TODO: Temp solution for this https://github.com/neoforged/NeoForge/pull/1465
-    public static final TagKey<Item> ANIMAL_FOODS = tag("animal_foods");
-
     private static TagKey<Item> tag(String name) {
       return ItemTags.create(RailcraftConstants.rl(name));
     }

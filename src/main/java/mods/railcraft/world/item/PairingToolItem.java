@@ -160,6 +160,7 @@ public abstract class PairingToolItem<T, P> extends Item {
     }
   }
 
+  @Nullable
   private static <T> T getBlockEntity(BlockGetter getter, BlockPos pos, Class<T> type) {
     var entity = getter.getBlockEntity(pos);
     return type.isInstance(entity) ? type.cast(entity) : null;

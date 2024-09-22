@@ -3,6 +3,7 @@ package mods.railcraft.world.item.component;
 import com.mojang.serialization.Codec;
 import mods.railcraft.api.core.RailcraftConstants;
 import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.fluids.SimpleFluidContent;
@@ -12,7 +13,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class RailcraftDataComponents {
 
   private static final DeferredRegister.DataComponents deferredRegister =
-      DeferredRegister.createDataComponents(RailcraftConstants.ID);
+      DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, RailcraftConstants.ID);
 
   public static void register(IEventBus modEventBus) {
     deferredRegister.register(modEventBus);

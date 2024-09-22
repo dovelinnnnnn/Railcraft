@@ -1,4 +1,4 @@
-// 1.21.1	2024-08-25T09:12:57.850367	Tags for minecraft:item mod id railcraft
+// 1.21.1	2024-09-22T21:02:26.843635	Tags for minecraft:item mod id railcraft
 e4b5c3cfded4b9b76efeda37728f26dc89261239 data/c/tags/item/armors/boots/steel.json
 5251495abc7cf69ab447d425014c585ffd3ee618 data/c/tags/item/armors/chestplates/steel.json
 e17d210ae3b04c5e5696fab17c38c94dcb437f75 data/c/tags/item/armors/helmets/steel.json
@@ -105,7 +105,6 @@ c12118bda87efc5274515a86a0a7f3b189982de6 data/minecraft/tags/item/pickaxes.json
 05168ea5fb65c2a597f1ca271644789e1dd9aa9c data/minecraft/tags/item/swords.json
 4276d58b0cb375037387fa9b749ae6b1e09d33c9 data/railcraft/tags/item/abandoned_track.json
 9b21abe5b3e3997560ef95937505d9a8112afa92 data/railcraft/tags/item/abyssal.json
-9dcbe8b8b921d7744627308e1b67194a1605d942 data/railcraft/tags/item/animal_foods.json
 3f5ccd47db2e1f5b813e0f1e606034d2ba9b53e6 data/railcraft/tags/item/crowbar.json
 ce3776760cd245b3be24a2863b4f4ab016e5b8ff data/railcraft/tags/item/detector.json
 592e64113a8afc0a5dafcdbf62ae4c012d67b168 data/railcraft/tags/item/electric_track.json

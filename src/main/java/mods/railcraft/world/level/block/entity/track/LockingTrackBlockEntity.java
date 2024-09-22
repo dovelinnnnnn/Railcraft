@@ -28,7 +28,7 @@ import net.neoforged.neoforge.common.NeoForge;
 
 public class LockingTrackBlockEntity extends RailcraftBlockEntity implements LockingTrack {
 
-  public static final int TRAIN_LOCKDOWN_DELAY = 200;
+  private static final int TRAIN_LOCKDOWN_DELAY = 200;
 
   public static final double START_BOOST = 0.04;
   public static final double BOOST_FACTOR = 0.06;
@@ -126,7 +126,7 @@ public class LockingTrackBlockEntity extends RailcraftBlockEntity implements Loc
       }
       NeoForge.EVENT_BUS.post(new CartLockdownEvent.Lock(this.currentCart, this.getBlockPos()));
       this.lockingModeController.locked(this.currentCart);
-      this.currentCart.setDeltaMovement(0.0D, this.currentCart.getDeltaMovement().y(), 0.0D);
+      this.currentCart.setDeltaMovement(0, this.currentCart.getDeltaMovement().y(), 0);
       RailShape railShape = TrackBlock.getRailShapeRaw(this.getBlockState());
       if (RailShapeUtil.isNorthSouth(railShape)) {
         this.currentCart.setPos(this.currentCart.getX(), this.currentCart.getY(),
