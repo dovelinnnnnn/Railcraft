@@ -137,8 +137,9 @@ public class BlastFurnaceModule extends CookingModule<BlastFurnaceRecipe, BlastF
     }
     this.currentItemBurnTime = itemBurnTime + this.burnTime;
     this.setBurnTime(this.currentItemBurnTime);
+    var craftRemainder = fuel.getCraftingRemainingItem();
     fuel.shrink(1);
-    this.setItem(SLOT_FUEL, fuel.isEmpty() ? ItemStack.EMPTY : fuel);
+    this.setItem(SLOT_FUEL, fuel.isEmpty() ? craftRemainder : fuel);
   }
 
   public void setBurnTime(int burnTime) {

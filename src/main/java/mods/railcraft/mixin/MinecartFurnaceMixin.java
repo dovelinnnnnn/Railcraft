@@ -43,7 +43,11 @@ public abstract class MinecartFurnaceMixin extends AbstractMinecart {
     var burnTime = itemstack.getBurnTime(null);
     if (burnTime > 0 && this.fuel + burnTime <= 32000) {
       if (!player.getAbilities().instabuild) {
+        var craftRemainder = itemstack.getCraftingRemainingItem();
         itemstack.shrink(1);
+        if (itemstack.isEmpty()) {
+          player.setItemInHand(hand, craftRemainder);
+        }
       }
 
       this.fuel += burnTime;
