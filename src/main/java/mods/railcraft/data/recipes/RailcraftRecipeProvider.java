@@ -534,7 +534,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern("a")
         .pattern("b")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.STEEL_INGOT.get()),
             has(RailcraftTags.Items.STEEL_INGOT))
         .save(recipeOutput);
@@ -543,7 +543,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern("b")
         .pattern("b")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.STEEL_INGOT.get()),
             has(RailcraftTags.Items.STEEL_INGOT))
         .save(recipeOutput);
@@ -552,7 +552,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern(" b ")
         .pattern(" b ")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.STEEL_INGOT.get()),
             has(RailcraftTags.Items.STEEL_INGOT))
         .save(recipeOutput);
@@ -561,7 +561,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern("ab")
         .pattern(" b")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.STEEL_INGOT.get()),
             has(RailcraftTags.Items.STEEL_INGOT))
         .save(recipeOutput);
@@ -570,7 +570,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern(" b")
         .pattern(" b")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.STEEL_INGOT.get()),
             has(RailcraftTags.Items.STEEL_INGOT))
         .save(recipeOutput);
@@ -635,7 +635,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern(" b ")
         .pattern(" b ")
         .define('a', Tags.Items.INGOTS_IRON)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .define('c', Tags.Items.STORAGE_BLOCKS_IRON)
         .unlockedBy(getHasName(Items.IRON_BLOCK), has(Tags.Items.STORAGE_BLOCKS_IRON))
         .save(recipeOutput);
@@ -644,7 +644,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern(" b ")
         .pattern(" b ")
         .define('a', RailcraftTags.Items.STEEL_INGOT)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .define('c', RailcraftTags.Items.STEEL_BLOCK)
         .unlockedBy(getHasName(RailcraftItems.STEEL_BLOCK.get()),
             has(RailcraftTags.Items.STEEL_BLOCK))
@@ -654,7 +654,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern(" b ")
         .pattern(" b ")
         .define('a', Tags.Items.GEMS_DIAMOND)
-        .define('b', Items.STICK)
+        .define('b', Tags.Items.RODS_WOODEN)
         .define('c', Tags.Items.STORAGE_BLOCKS_DIAMOND)
         .unlockedBy(getHasName(Items.DIAMOND_BLOCK), has(Tags.Items.STORAGE_BLOCKS_DIAMOND))
         .save(recipeOutput);
@@ -1099,7 +1099,7 @@ public class RailcraftRecipeProvider extends RecipeProvider implements IConditio
         .pattern("c")
         .define('a', RailcraftItems.CREOSOTE_BOTTLE.get())
         .define('b', ItemTags.WOOL)
-        .define('c', Items.STICK)
+        .define('c', Tags.Items.RODS_WOODEN)
         .unlockedBy(getHasName(RailcraftItems.CREOSOTE_BOTTLE.get()),
             has(RailcraftItems.CREOSOTE_BOTTLE.get()))
         .save(recipeOutput, RailcraftConstants.rl("torch_creosote"));

@@ -6,7 +6,7 @@
       "tag": "c:ingots/iron"
     },
     "b": {
-      "item": "minecraft:stick"
+      "tag": "c:rods/wooden"
     },
     "c": {
       "tag": "c:storage_blocks/iron"

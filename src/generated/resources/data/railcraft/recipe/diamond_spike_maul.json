@@ -6,7 +6,7 @@
       "tag": "c:gems/diamond"
     },
     "b": {
-      "item": "minecraft:stick"
+      "tag": "c:rods/wooden"
     },
     "c": {
       "tag": "c:storage_blocks/diamond"
